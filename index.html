@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pace Bakers & Sweets – Dadu, Pakistan</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<style>
+:root{--gold:#D4A017;--gold-light:#F5C842;--gold-pale:#FFF3C4;--choc:#3B1A08;--choc-mid:#6B3A1F;--cream:#FDF6EC;--pink:#E8365D;--green:#2D6A4F;--white:#FFFFFF;--shadow:0 8px 32px rgba(59,26,8,0.13);--radius:18px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--choc);overflow-x:hidden;}
+nav{position:sticky;top:0;z-index:100;background:var(--choc);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:66px;box-shadow:0 2px 18px rgba(0,0,0,0.25);}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;font-weight:900;display:flex;align-items:center;gap:10px;}
+.nav-logo span{font-family:'Dancing Script',cursive;color:var(--gold-light);font-size:1rem;}
+.nav-links{display:flex;align-items:center;gap:18px;}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-links .btn-order{background:var(--gold);color:var(--choc);padding:8px 18px;border-radius:50px;font-weight:700;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{display:block;width:26px;height:3px;background:var(--cream);border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;background:var(--choc);padding:10px 0 18px;}
+.mobile-menu a{color:var(--cream);text-decoration:none;padding:12px 7vw;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.hero{min-height:88vh;background:linear-gradient(135deg,var(--choc) 0%,#5C2A0A 55%,#8B4513 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:80px 5vw 60px;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4A017' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+.hero-badge{display:inline-block;background:var(--gold);color:var(--choc);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:24px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,7vw,5rem);color:#fff;line-height:1.08;margin-bottom:18px;}
+.hero h1 em{color:var(--gold-light);font-style:italic;}
+.hero p{font-size:clamp(.95rem,2vw,1.15rem);color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 36px;line-height:1.7;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--gold);color:var(--choc);padding:13px 30px;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,160,23,.4);}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:13px 30px;border-radius:50px;font-weight:600;font-size:1rem;text-decoration:none;transition:all .2s;cursor:pointer;display:inline-flex;align-items:center;gap:7px;}
+.btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);}
+.hero-stats{display:flex;gap:36px;justify-content:center;margin-top:54px;flex-wrap:wrap;}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold-light);}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;}
+section{padding:60px 5vw;}
+.section-head{text-align:center;margin-bottom:44px;}
+.section-tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);padding:5px 16px;border-radius:50px;margin-bottom:12px;}
+.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--choc);}
+.section-head p{color:var(--choc-mid);font-size:.97rem;margin-top:10px;max-width:500px;margin-left:auto;margin-right:auto;}
+.announcement{background:var(--gold);padding:11px 5vw;text-align:center;font-size:.88rem;font-weight:600;color:var(--choc);}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;max-width:900px;margin:0 auto;}
+.cat-card{background:var(--cream);border-radius:var(--radius);padding:18px 10px;text-align:center;cursor:pointer;transition:all .22s;border:2px solid transparent;}
+.cat-card:hover,.cat-card.active{background:var(--choc);border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow);}
+.cat-card:hover .cat-name,.cat-card.active .cat-name{color:var(--gold-light);}
+.cat-icon{font-size:1.9rem;margin-bottom:7px;}
+.cat-name{font-size:.83rem;font-weight:600;color:var(--choc);transition:color .2s;}
+#product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;}
+.product-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 14px rgba(59,26,8,.07);transition:transform .22s,box-shadow .22s;position:relative;}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.product-img{width:100%;height:170px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;background:linear-gradient(135deg,var(--gold-pale),#f0d9b5);}
+.product-body{padding:15px;}
+.product-badge{display:inline-block;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:7px;}
+.badge-discount{background:#FFEAEA;color:var(--pink);}
+.badge-new{background:#E8F5E9;color:var(--green);}
+.badge-bestseller{background:var(--gold-pale);color:var(--choc);}
+.product-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--choc);margin-bottom:4px;}
+.product-desc{font-size:.8rem;color:var(--choc-mid);margin-bottom:10px;line-height:1.5;}
+.product-price-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
+.price-now{font-size:1.12rem;font-weight:700;color:var(--pink);}
+.price-original{font-size:.86rem;color:#aaa;text-decoration:line-through;}
+.discount-chip{background:var(--pink);color:#fff;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:50px;}
+/* QTY CONTROLS */
+.qty-row{display:flex;align-items:center;gap:0;margin-bottom:10px;border:2px solid #e8ddd0;border-radius:10px;overflow:hidden;}
+.qty-btn{background:var(--gold-pale);border:none;padding:8px 14px;font-size:1.1rem;font-weight:700;cursor:pointer;color:var(--choc);transition:background .15s;flex-shrink:0;}
+.qty-btn:hover{background:var(--gold);}
+.qty-display{flex:1;text-align:center;font-weight:700;font-size:.95rem;color:var(--choc);padding:8px 4px;background:#fff;}
+.btn-cart{width:100%;background:var(--choc);color:var(--gold-light);border:none;padding:10px;border-radius:10px;font-weight:700;font-size:.88rem;cursor:pointer;transition:all .2s;margin-bottom:6px;}
+.btn-cart:hover{background:var(--gold);color:var(--choc);}
+.btn-wa-sm{width:100%;background:#25D366;color:#fff;border:none;padding:9px;border-radius:10px;font-weight:700;font-size:.85rem;cursor:pointer;transition:all .2s;}
+.btn-wa-sm:hover{background:#1ebe57;}
+/* CART SIDEBAR */
+.cart-sidebar{position:fixed;right:-400px;top:0;height:100%;width:380px;max-width:95vw;background:#fff;z-index:300;box-shadow:-8px 0 40px rgba(0,0,0,.18);transition:right .3s ease;display:flex;flex-direction:column;}
+.cart-sidebar.open{right:0;}
+.cart-sidebar-header{background:var(--choc);color:#fff;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;}
+.cart-sidebar-header h3{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1.2rem;}
+.cart-sidebar-close{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1;}
+.cart-sidebar-body{flex:1;overflow-y:auto;padding:16px;}
+.cart-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f0e8de;}
+.cart-item-emoji{font-size:2rem;flex-shrink:0;}
+.cart-item-info{flex:1;}
+.cart-item-name{font-weight:700;font-size:.9rem;color:var(--choc);}
+.cart-item-price{font-size:.82rem;color:var(--choc-mid);}
+.cart-item-controls{display:flex;align-items:center;gap:6px;margin-top:5px;}
+.ci-btn{background:var(--gold-pale);border:none;border-radius:6px;width:26px;height:26px;font-size:1rem;font-weight:700;cursor:pointer;color:var(--choc);display:flex;align-items:center;justify-content:center;}
+.ci-qty{font-weight:700;font-size:.9rem;min-width:22px;text-align:center;}
+.cart-item-total{font-weight:700;font-size:.95rem;color:var(--pink);flex-shrink:0;}
+.cart-remove{background:none;border:none;color:#ccc;cursor:pointer;font-size:1rem;padding:4px;}
+.cart-remove:hover{color:var(--pink);}
+.cart-sidebar-footer{padding:16px;border-top:2px solid #f0e8de;background:#fafaf8;}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.cart-total-label{font-size:.9rem;color:var(--choc-mid);}
+.cart-total-amount{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--choc);}
+/* MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;padding:16px;}
+.modal-bg.open{display:flex;}
+.modal{background:#fff;border-radius:22px;max-width:500px;width:100%;max-height:92vh;overflow-y:auto;padding:26px;box-shadow:0 20px 80px rgba(0,0,0,.3);}
+.modal h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:16px;color:var(--choc);}
+.modal-close{float:right;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888;line-height:1;margin-top:-4px;}
+.modal label{display:block;font-size:.82rem;font-weight:600;color:var(--choc-mid);margin-bottom:4px;}
+.modal input,.modal textarea,.modal select{width:100%;border:2px solid #e8ddd0;border-radius:10px;padding:9px 12px;font-size:.92rem;font-family:'DM Sans',sans-serif;margin-bottom:11px;outline:none;transition:border .2s;}
+.modal input:focus,.modal textarea:focus,.modal select:focus{border-color:var(--gold);}
+.modal textarea{resize:vertical;min-height:70px;}
+.modal-total{background:var(--gold-pale);border-radius:12px;padding:12px 16px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;font-weight:700;}
+/* PAYMENT */
+.payment-methods{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.pay-option{border:2px solid #e8ddd0;border-radius:12px;padding:14px;cursor:pointer;text-align:center;transition:all .2s;}
+.pay-option:hover,.pay-option.selected{border-color:var(--gold);background:var(--gold-pale);}
+.pay-option .pay-icon{font-size:1.8rem;margin-bottom:6px;}
+.pay-option .pay-name{font-weight:700;font-size:.88rem;color:var(--choc);}
+.pay-option .pay-num{font-size:.75rem;color:var(--choc-mid);}
+.pay-instructions{background:#f0f8ff;border:2px solid #bee3f8;border-radius:12px;padding:14px;margin-bottom:14px;font-size:.85rem;line-height:1.6;display:none;}
+.pay-instructions.show{display:block;}
+.txn-input{border:2px solid var(--gold)!important;background:var(--gold-pale);}
+/* COD */
+.cod-box{background:#e8f5e9;border:2px solid #a5d6a7;border-radius:12px;padding:14px;margin-bottom:14px;font-size:.85rem;display:none;}
+.cod-box.show{display:block;}
+/* RECEIPT */
+.receipt{background:#fff;border:2px dashed var(--gold);border-radius:16px;padding:22px;font-size:.88rem;}
+.receipt-header{text-align:center;border-bottom:2px dashed #e8ddd0;padding-bottom:14px;margin-bottom:14px;}
+.receipt-header h2{font-family:'Playfair Display',serif;color:var(--choc);font-size:1.4rem;}
+.receipt-header p{color:var(--choc-mid);font-size:.8rem;}
+.receipt-row{display:flex;justify-content:space-between;margin-bottom:7px;font-size:.86rem;gap:10px;}
+.receipt-row span:last-child{text-align:right;font-weight:600;}
+.receipt-row.total{font-weight:700;font-size:.98rem;border-top:2px dashed #e8ddd0;padding-top:10px;margin-top:6px;}
+.receipt-items{background:var(--cream);border-radius:10px;padding:10px;margin:10px 0;}
+.receipt-footer{text-align:center;margin-top:14px;color:var(--choc-mid);font-size:.79rem;}
+.order-status{display:inline-block;padding:3px 12px;border-radius:50px;font-size:.76rem;font-weight:700;}
+.status-pending{background:#FFF3C4;color:#B7791F;}
+.status-confirmed{background:#E8F5E9;color:#276749;}
+.status-preparing{background:#EBF4FF;color:#1A56DB;}
+.status-ready{background:#F3E8FF;color:#7C3AED;}
+.status-delivered{background:#E8F5E9;color:var(--green);}
+.status-cancelled{background:#FFEAEA;color:var(--pink);}
+.status-paid{background:#E8F5E9;color:var(--green);}
+.status-pending_payment{background:#FFF3C4;color:#B7791F;}
+/* CUSTOM */
+.custom-cake{background:linear-gradient(135deg,var(--choc) 0%,#5C2A0A 100%);border-radius:28px;padding:50px 5vw;text-align:center;color:#fff;margin:0 0;}
+.custom-cake h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;color:var(--gold-light);}
+.custom-cake p{color:rgba(255,255,255,.78);max-width:480px;margin:0 auto 24px;line-height:1.7;}
+.custom-features{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px;}
+.custom-feat{background:rgba(255,255,255,.08);border:1px solid rgba(212,160,23,.3);border-radius:12px;padding:11px 16px;font-size:.84rem;display:flex;align-items:center;gap:7px;}
+/* SOCIAL */
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;max-width:740px;margin:0 auto;}
+.social-card{border-radius:var(--radius);padding:26px;text-align:center;text-decoration:none;transition:transform .2s,box-shadow .2s;color:#fff;}
+.social-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.social-card.insta{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);}
+.social-card.fb{background:#1877F2;}
+.social-card.wa{background:#25D366;}
+.social-icon{font-size:2.2rem;margin-bottom:9px;}
+.social-card h3{font-size:1rem;font-weight:700;margin-bottom:4px;}
+.social-card p{font-size:.8rem;opacity:.85;}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:900px;margin:0 auto;}
+.contact-info{display:flex;flex-direction:column;gap:14px;}
+.contact-item{display:flex;align-items:flex-start;gap:12px;background:#fff;border-radius:14px;padding:15px;}
+.contact-item-icon{font-size:1.3rem;min-width:36px;text-align:center;}
+.contact-item h4{font-weight:700;margin-bottom:2px;font-size:.9rem;}
+.contact-item p,.contact-item a{color:var(--choc-mid);font-size:.84rem;text-decoration:none;}
+.contact-form{background:#fff;border-radius:var(--radius);padding:24px;}
+.contact-form h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:16px;color:var(--choc);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.form-group{margin-bottom:11px;}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--choc-mid);margin-bottom:4px;}
+.form-group input,.form-group textarea,.form-group select{width:100%;border:2px solid #e8ddd0;border-radius:10px;padding:9px 12px;font-size:.9rem;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-group textarea{resize:vertical;min-height:80px;}
+footer{background:var(--choc);color:rgba(255,255,255,.7);padding:44px 5vw 24px;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px;margin-bottom:30px;}
+.footer-col h4{color:var(--gold-light);font-size:.84rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:11px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:7px;}
+.footer-col ul li a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;transition:color .2s;}
+.footer-col ul li a:hover{color:var(--gold-light);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;text-align:center;font-size:.78rem;}
+/* FLOATING BTNS */
+.admin-fab{position:fixed;bottom:24px;right:24px;background:var(--choc);color:var(--gold);border:2px solid var(--gold);border-radius:50px;padding:9px 16px;font-size:.8rem;font-weight:700;cursor:pointer;z-index:90;display:flex;align-items:center;gap:6px;box-shadow:0 4px 18px rgba(0,0,0,.2);}
+.admin-fab:hover{background:var(--gold);color:var(--choc);}
+.cart-fab{position:fixed;bottom:24px;left:24px;background:var(--gold);color:var(--choc);border:none;border-radius:50px;padding:10px 18px;font-size:.85rem;font-weight:700;cursor:pointer;z-index:90;display:flex;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(212,160,23,.35);}
+.cart-fab:hover{background:var(--gold-light);}
+.cart-count{background:var(--pink);color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:900;}
+.wa-float{position:fixed;bottom:72px;right:24px;background:#25D366;color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;text-decoration:none;z-index:89;box-shadow:0 4px 18px rgba(37,211,102,.4);}
+/* ADMIN */
+#admin-panel{display:none;position:fixed;inset:0;background:var(--cream);z-index:600;overflow-y:auto;}
+.admin-header{background:var(--choc);color:#fff;padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.admin-header h2{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1.2rem;}
+.admin-close{background:none;border:2px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:5px 14px;cursor:pointer;font-size:.86rem;}
+.admin-close:hover{background:var(--gold);color:var(--choc);border-color:var(--gold);}
+.admin-body{padding:22px 5vw;max-width:1100px;margin:0 auto;}
+.admin-tabs{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap;}
+.admin-tab{background:#fff;border:2px solid #ddd;border-radius:10px;padding:8px 16px;cursor:pointer;font-weight:600;font-size:.86rem;color:var(--choc-mid);transition:all .2s;}
+.admin-tab.active{background:var(--choc);color:var(--gold-light);border-color:var(--choc);}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-card{background:#fff;border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.admin-card h3{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:14px;color:var(--choc);border-bottom:2px solid var(--gold-pale);padding-bottom:8px;}
+.admin-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.admin-input{width:100%;border:2px solid #e8ddd0;border-radius:10px;padding:8px 12px;font-size:.9rem;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:9px;transition:border .2s;}
+.admin-input:focus{border-color:var(--gold);}
+.admin-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.admin-table th{background:var(--gold-pale);color:var(--choc);padding:8px 12px;text-align:left;font-weight:700;font-size:.8rem;}
+.admin-table td{padding:8px 12px;border-bottom:1px solid #f0e8de;vertical-align:middle;}
+.admin-table tr:hover td{background:#faf5ef;}
+.btn-edit{background:var(--gold);color:var(--choc);border:none;border-radius:7px;padding:4px 11px;font-size:.76rem;font-weight:700;cursor:pointer;margin-right:3px;}
+.btn-del{background:#ff4444;color:#fff;border:none;border-radius:7px;padding:4px 11px;font-size:.76rem;font-weight:700;cursor:pointer;}
+.btn-view{background:#1A56DB;color:#fff;border:none;border-radius:7px;padding:4px 11px;font-size:.76rem;font-weight:700;cursor:pointer;margin-right:3px;}
+.btn-save{background:var(--choc);color:var(--gold-light);border:none;border-radius:10px;padding:10px 24px;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-save:hover{background:var(--gold);color:var(--choc);}
+.admin-login-wrap{max-width:360px;margin:80px auto;background:#fff;border-radius:22px;padding:36px;text-align:center;box-shadow:var(--shadow);}
+.admin-login-wrap h2{font-family:'Playfair Display',serif;color:var(--choc);margin-bottom:18px;}
+.settings-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
+.settings-row label{font-weight:600;font-size:.86rem;min-width:130px;}
+.settings-row input{flex:1;border:2px solid #e8ddd0;border-radius:10px;padding:8px 12px;font-family:'DM Sans',sans-serif;outline:none;min-width:160px;}
+.settings-row input:focus{border-color:var(--gold);}
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:18px;}
+.stat-card{background:#fff;border-radius:14px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.stat-card .num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;}
+.stat-card .lbl{font-size:.72rem;color:var(--choc-mid);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+.stat-card.gold .num{color:var(--gold);}
+.stat-card.pink .num{color:var(--pink);}
+.stat-card.green .num{color:var(--green);}
+.stat-card.blue .num{color:#1A56DB;}
+.status-select{border:2px solid #e8ddd0;border-radius:8px;padding:3px 7px;font-size:.78rem;font-family:'DM Sans',sans-serif;outline:none;cursor:pointer;}
+/* TRACK */
+.track-box{max-width:480px;margin:0 auto;background:#fff;border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow);}
+.track-box input{width:100%;border:2px solid #e8ddd0;border-radius:12px;padding:12px 16px;font-size:1rem;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:12px;text-align:center;letter-spacing:2px;}
+.track-box input:focus{border-color:var(--gold);}
+/* TOAST */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--choc);color:var(--gold-light);padding:10px 24px;border-radius:50px;font-weight:600;font-size:.86rem;z-index:9999;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+/* OVERLAY */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:299;}
+.sidebar-overlay.open{display:block;}
+/* LOCK SCREEN */
+#lock-screen{display:none;position:fixed;inset:0;background:var(--choc);z-index:9999;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px;}
+#lock-screen.show{display:flex;}
+/* SAAS OWNER */
+#saas-panel{display:none;position:fixed;inset:0;background:#0f172a;z-index:700;overflow-y:auto;}
+.saas-header{background:#1e293b;padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;}
+.saas-header h2{color:#f1c40f;font-family:'Playfair Display',serif;font-size:1.2rem;}
+.saas-body{padding:24px 5vw;max-width:1100px;margin:0 auto;}
+.saas-card{background:#1e293b;border-radius:16px;padding:20px;margin-bottom:16px;}
+.saas-card h3{color:#94a3b8;font-size:.82rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;border-bottom:1px solid #334155;padding-bottom:8px;}
+.saas-input{width:100%;background:#0f172a;border:2px solid #334155;border-radius:10px;padding:8px 12px;color:#e2e8f0;font-family:'DM Sans',sans-serif;font-size:.9rem;outline:none;margin-bottom:10px;}
+.saas-input:focus{border-color:#f1c40f;}
+.saas-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+.saas-table th{background:#0f172a;color:#94a3b8;padding:8px 12px;text-align:left;font-size:.78rem;font-weight:700;text-transform:uppercase;}
+.saas-table td{padding:9px 12px;border-bottom:1px solid #1e293b;color:#e2e8f0;vertical-align:middle;}
+.saas-table tr:hover td{background:#1e293b;}
+.saas-btn{border:none;border-radius:8px;padding:6px 14px;font-size:.8rem;font-weight:700;cursor:pointer;margin-right:4px;}
+.saas-btn.green{background:#22c55e;color:#fff;}
+.saas-btn.red{background:#ef4444;color:#fff;}
+.saas-btn.yellow{background:#f1c40f;color:#0f172a;}
+.saas-btn.blue{background:#3b82f6;color:#fff;}
+.saas-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:20px;}
+.saas-stat{background:#1e293b;border-radius:12px;padding:16px;text-align:center;}
+.saas-stat .n{font-size:1.6rem;font-weight:900;font-family:'Playfair Display',serif;}
+.saas-stat .l{font-size:.72rem;color:#64748b;text-transform:uppercase;margin-top:3px;}
+.saas-stat.active .n{color:#22c55e;}
+.saas-stat.expired .n{color:#ef4444;}
+.saas-stat.revenue .n{color:#f1c40f;}
+.shop-status-badge{display:inline-block;padding:3px 10px;border-radius:50px;font-size:.75rem;font-weight:700;}
+.shop-active{background:#166534;color:#86efac;}
+.shop-expired{background:#7f1d1d;color:#fca5a5;}
+.shop-suspended{background:#78350f;color:#fcd34d;}
+.saas-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.saas-login-wrap{max-width:360px;margin:80px auto;background:#1e293b;border-radius:22px;padding:36px;text-align:center;}
+.saas-login-wrap h2{color:#f1c40f;font-family:'Playfair Display',serif;margin-bottom:18px;}
+.toggle-switch{position:relative;display:inline-block;width:48px;height:26px;}
+.toggle-switch input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;cursor:pointer;inset:0;background:#ef4444;border-radius:26px;transition:.3s;}
+.toggle-slider:before{content:'';position:absolute;height:20px;width:20px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+.toggle-switch input:checked + .toggle-slider{background:#22c55e;}
+.toggle-switch input:checked + .toggle-slider:before{transform:translateX(22px);}
+@media(max-width:768px){
+  .nav-links{display:none;}.hamburger{display:flex;}
+  .contact-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}
+  .admin-form-row{grid-template-columns:1fr;}.cart-sidebar{width:100%;right:-100%;}
+  .saas-form-row{grid-template-columns:1fr;}
+}
+@media print{body>*:not(#print-area){display:none!important;}#print-area{display:block!important;}}
+#print-area{display:none;}
+</style>
+</head>
+<body>
+
+<!-- LOCK SCREEN -->
+<div id="lock-screen">
+  <div style="font-size:4rem;margin-bottom:16px;">🔒</div>
+  <h2 style="font-family:'Playfair Display',serif;color:var(--gold-light);font-size:2rem;margin-bottom:12px;">Shop Unavailable</h2>
+  <p style="color:rgba(255,255,255,.7);max-width:400px;line-height:1.7;margin-bottom:20px;" id="lock-msg">This shop's subscription has expired. Please contact the administrator to renew.</p>
+  <a href="#" id="lock-wa" style="background:#25D366;color:#fff;padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:700;">💬 Contact Support</a>
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement" id="announcement-bar">🎉 <span id="announcement-text">Special offer: 20% off on all custom cakes! Call: +92 311 1727333</span></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🎂 <div><div>Pace Bakers</div><span>&amp; Sweets</span></div></div>
+  <div class="nav-links">
+    <a href="#menu">Menu</a>
+    <a href="#custom">Custom Cakes</a>
+    <a href="#track">Track Order</a>
+    <a href="#social">Follow Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#menu" class="btn-order">Order Now</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#menu" onclick="toggleMenu()">Menu</a>
+  <a href="#custom" onclick="toggleMenu()">Custom Cakes</a>
+  <a href="#track" onclick="toggleMenu()">Track Order</a>
+  <a href="#social" onclick="toggleMenu()">Follow Us</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#menu" onclick="toggleMenu()" style="background:var(--gold);color:var(--choc);font-weight:700;">🛒 Order Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <div class="hero-badge">📍 Kachehari Road, Dadu, Pakistan</div>
+    <h1>Crafted With Love,<br/><em>Baked to Perfection</em></h1>
+    <p>From delicate custom cakes to freshly baked sweets — Pace Bakers &amp; Sweets brings joy to every celebration.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">🎂 Explore Menu</a>
+      <a href="#custom" class="btn-outline">✨ Custom Cake</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">16K+</div><div class="stat-label">Followers</div></div>
+      <div class="stat"><div class="stat-num">86%</div><div class="stat-label">Recommend</div></div>
+      <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Quality</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section style="background:#fff;padding:50px 5vw;" id="menu">
+  <div class="section-head">
+    <div class="section-tag">Our Menu</div>
+    <h2>What We Bake Fresh Daily</h2>
+    <p>Browse by category and add items to your cart</p>
+  </div>
+  <div class="cat-grid" id="cat-grid"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section style="background:var(--cream);padding:50px 5vw;">
+  <div class="section-head">
+    <div class="section-tag" id="active-cat-label">All Items</div>
+    <h2 id="products-heading">Our Full Menu</h2>
+    <p>Add multiple items to cart &amp; checkout in one order</p>
+  </div>
+  <div id="product-grid"></div>
+</section>
+
+<!-- CUSTOM CAKE -->
+<section id="custom" style="background:#fff;padding:60px 5vw;">
+  <div class="custom-cake">
+    <div class="section-tag" style="background:rgba(255,255,255,.12);color:var(--gold-light);">Custom Orders</div>
+    <h2>Design Your Dream Cake</h2>
+    <p>Tell us your vision — flavor, size, theme, message — and we'll craft a cake that makes your celebration unforgettable.</p>
+    <div class="custom-features">
+      <div class="custom-feat">🎨 Custom Designs</div>
+      <div class="custom-feat">📅 Advance Booking</div>
+      <div class="custom-feat">🚚 Local Delivery</div>
+      <div class="custom-feat">💬 WhatsApp Order</div>
+    </div>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn-primary" onclick="openCustomOrder()">📝 Place Custom Order</button>
+      <a class="btn-outline" id="wa-custom-link" href="#">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK ORDER -->
+<section id="track" style="background:var(--cream);padding:60px 5vw;">
+  <div class="section-head">
+    <div class="section-tag">Order Tracking</div>
+    <h2>Track Your Order</h2>
+    <p>Enter your order number to see live status &amp; receipt</p>
+  </div>
+  <div class="track-box">
+    <div style="font-size:3rem;margin-bottom:10px;">🔍</div>
+    <input type="text" id="track-input" placeholder="e.g. PB-0000001" oninput="this.value=this.value.toUpperCase()"/>
+    <button class="btn-primary" style="width:100%;justify-content:center;" onclick="trackOrder()">Track Order</button>
+    <div id="track-result" style="margin-top:18px;text-align:left;"></div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section style="background:#fff;padding:60px 5vw;" id="social">
+  <div class="section-head">
+    <div class="section-tag">Stay Connected</div>
+    <h2>Follow for Tasty Updates</h2>
+  </div>
+  <div class="social-grid">
+    <a class="social-card insta" id="insta-link" href="#" target="_blank"><div class="social-icon">📸</div><h3>Instagram</h3><p>Follow for cake photos &amp; daily specials</p></a>
+    <a class="social-card fb" id="fb-link" href="#" target="_blank"><div class="social-icon">👥</div><h3>Facebook</h3><p>Like our page — 16K+ followers!</p></a>
+    <a class="social-card wa" id="wa-link" href="#" target="_blank"><div class="social-icon">💬</div><h3>WhatsApp</h3><p>Chat directly to place or ask about orders</p></a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section style="background:var(--cream);padding:60px 5vw;" id="contact">
+  <div class="section-head"><div class="section-tag">Get In Touch</div><h2>We'd Love to Hear From You</h2></div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item"><div class="contact-item-icon">📍</div><div><h4>Location</h4><p id="contact-address">Kachehari Road, Dadu, Pakistan, 76200</p></div></div>
+      <div class="contact-item"><div class="contact-item-icon">📞</div><div><h4>Phone / WhatsApp</h4><a id="contact-phone-link" href="#"><span id="contact-phone">+92 311 1727333</span></a></div></div>
+      <div class="contact-item"><div class="contact-item-icon">✉️</div><div><h4>Email</h4><a id="contact-email-link" href="#"><span id="contact-email">pacedadu@gmail.com</span></a></div></div>
+      <div class="contact-item"><div class="contact-item-icon">🕐</div><div><h4>Hours</h4><p id="contact-hours">Open Daily – Morning to Evening</p></div></div>
+    </div>
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" id="cf-name" placeholder="Ali Khan"/></div>
+        <div class="form-group"><label>Phone</label><input type="tel" id="cf-phone" placeholder="+92 3XX XXXXXXX"/></div>
+      </div>
+      <div class="form-group"><label>Subject</label><select id="cf-type"><option>Custom Cake Order</option><option>General Inquiry</option><option>Bulk / Event Order</option><option>Feedback</option></select></div>
+      <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Tell us about your order..."></textarea></div>
+      <button class="btn-save" onclick="sendContactWA()" style="width:100%">💬 Send via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="nav-logo" style="margin-bottom:10px;">🎂 <div><div>Pace Bakers</div><span>& Sweets</span></div></div><p style="font-size:.82rem;line-height:1.6;">Freshly baked with love every day in Dadu.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#menu">Our Menu</a></li><li><a href="#custom">Custom Cakes</a></li><li><a href="#track">Track Order</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Specialties</h4><ul id="footer-cats"></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a id="footer-phone" href="#">📞 +92 311 1727333</a></li><li><a id="footer-email" href="#">✉️ pacedadu@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2024 Pace Bakers &amp; Sweets – Dadu. Powered by <span style="color:var(--gold);">BakerSaaS</span></div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="sidebar-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-sidebar-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-sidebar-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-sidebar-body" id="cart-sidebar-body"></div>
+  <div class="cart-sidebar-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Subtotal</span>
+      <span class="cart-total-amount" id="cart-sidebar-total">Rs 0</span>
+    </div>
+    <button class="btn-primary" style="width:100%;justify-content:center;margin-bottom:8px;" onclick="openCheckout()">✅ Checkout Online</button>
+    <button class="btn-wa-sm" onclick="checkoutWhatsApp()">💬 Checkout via WhatsApp</button>
+  </div>
+</div>
+
+<!-- FLOATS -->
+<a class="wa-float" id="wa-float-btn" href="#" target="_blank">💬</a>
+<button class="admin-fab" onclick="openAdmin()">⚙️ Admin</button>
+<button class="cart-fab" onclick="openCart()">🛒 Cart <span class="cart-count" id="cart-count">0</span></button>
+
+<!-- ===== MODALS ===== -->
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-bg" id="checkout-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('checkout-modal')">✕</button>
+    <h3>📋 Complete Your Order</h3>
+    <div class="modal-total"><span>Order Total</span><span id="checkout-total-display">Rs 0</span></div>
+
+    <!-- Cart summary in checkout -->
+    <div id="checkout-items-summary" style="background:var(--cream);border-radius:10px;padding:10px;margin-bottom:14px;font-size:.83rem;max-height:130px;overflow-y:auto;"></div>
+
+    <label>Your Name *</label><input type="text" id="co-name" placeholder="Full Name"/>
+    <label>Phone Number *</label><input type="tel" id="co-phone" placeholder="+92 3XX XXXXXXX"/>
+    <label>Delivery Address *</label><input type="text" id="co-address" placeholder="Your address in Dadu"/>
+    <label>Special Notes</label><textarea id="co-notes" placeholder="Any special instructions..."></textarea>
+
+    <!-- PAYMENT -->
+    <div style="margin-bottom:10px;"><label>Select Payment Method *</label></div>
+    <div class="payment-methods">
+      <div class="pay-option" id="pay-jazzcash" onclick="selectPayment('jazzcash')">
+        <div class="pay-icon">📱</div>
+        <div class="pay-name">JazzCash</div>
+        <div class="pay-num" id="jc-num-display"></div>
+      </div>
+      <div class="pay-option" id="pay-easypaisa" onclick="selectPayment('easypaisa')">
+        <div class="pay-icon">💚</div>
+        <div class="pay-name">Easypaisa</div>
+        <div class="pay-num" id="ep-num-display"></div>
+      </div>
+      <div class="pay-option" id="pay-cod" onclick="selectPayment('cod')" style="grid-column:span 2;">
+        <div class="pay-icon">💵</div>
+        <div class="pay-name">Cash on Delivery</div>
+        <div class="pay-num">Pay when you receive</div>
+      </div>
+    </div>
+
+    <div class="pay-instructions" id="jazzcash-instructions">
+      <b>📱 JazzCash Payment Steps:</b><br/>
+      1. Open your JazzCash app or dial *786#<br/>
+      2. Send <b id="jc-amount"></b> to: <b id="jc-num-instr"></b><br/>
+      3. Account Name: <b id="jc-name"></b><br/>
+      4. Copy the Transaction ID and paste below<br/>
+      <span style="color:var(--pink);font-size:.8rem;">⚠️ Order confirmed after payment verification</span>
+    </div>
+    <div class="pay-instructions" id="easypaisa-instructions">
+      <b>💚 Easypaisa Payment Steps:</b><br/>
+      1. Open Easypaisa app or dial *786#<br/>
+      2. Send <b id="ep-amount"></b> to: <b id="ep-num-instr"></b><br/>
+      3. Account Name: <b id="ep-name"></b><br/>
+      4. Copy the Transaction ID and paste below<br/>
+      <span style="color:var(--pink);font-size:.8rem;">⚠️ Order confirmed after payment verification</span>
+    </div>
+    <div class="cod-box" id="cod-instructions">
+      <b>💵 Cash on Delivery Selected</b><br/>
+      Pay in cash when your order is delivered. Make sure your delivery address is correct!
+    </div>
+
+    <div id="txn-id-section" style="display:none;">
+      <label>Transaction ID *</label>
+      <input type="text" id="co-txn" placeholder="Paste your transaction ID here" class="txn-input"/>
+    </div>
+
+    <button class="btn-primary" style="width:100%;justify-content:center;" onclick="submitCheckoutOrder()">✅ Place Order</button>
+  </div>
+</div>
+
+<!-- RECEIPT MODAL -->
+<div class="modal-bg" id="receipt-modal">
+  <div class="modal" style="max-width:520px;">
+    <button class="modal-close" onclick="closeModal('receipt-modal')">✕</button>
+    <h3>🧾 Order Confirmed!</h3>
+    <div id="receipt-content"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;">
+      <button class="btn-save" onclick="printReceipt()">🖨️ Print Receipt</button>
+      <button class="btn-wa-sm" onclick="shareReceiptWA()" style="border-radius:10px;padding:10px;">💬 Share on WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOM ORDER MODAL -->
+<div class="modal-bg" id="custom-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('custom-modal')">✕</button>
+    <h3>🎨 Custom Cake Order</h3>
+    <label>Your Name *</label><input type="text" id="cust-name" placeholder="Full Name"/>
+    <label>Phone *</label><input type="tel" id="cust-phone" placeholder="+92 3XX XXXXXXX"/>
+    <label>Cake Theme / Occasion</label><input type="text" id="cust-theme" placeholder="Birthday, Wedding, Floral..."/>
+    <label>Flavor</label>
+    <select id="cust-flavor"><option>Chocolate</option><option>Vanilla</option><option>Red Velvet</option><option>Butterscotch</option><option>Strawberry</option><option>Pineapple</option><option>Other</option></select>
+    <label>Size / Weight</label>
+    <select id="cust-size"><option>0.5 kg</option><option>1 kg</option><option>1.5 kg</option><option>2 kg</option><option>3 kg+</option></select>
+    <label>Message on Cake</label><input type="text" id="cust-message" placeholder="Happy Birthday Ali!"/>
+    <label>Needed By (Date)</label><input type="date" id="cust-date"/>
+    <label>Additional Details</label><textarea id="cust-notes" placeholder="Colors, tiers, photo, design..."></textarea>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <button class="btn-save" onclick="submitCustomWebOrder()">✅ Place Online</button>
+      <button class="btn-wa-sm" onclick="submitCustomWA()" style="border-radius:10px;padding:10px;">💬 Via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN VIEW ORDER MODAL -->
+<div class="modal-bg" id="admin-order-modal">
+  <div class="modal" style="max-width:520px;">
+    <button class="modal-close" onclick="closeModal('admin-order-modal')">✕</button>
+    <h3>📋 Order Details</h3>
+    <div id="admin-order-detail"></div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div id="admin-login-screen">
+    <div class="admin-login-wrap">
+      <div style="font-size:3rem;margin-bottom:10px;">🔐</div>
+      <h2>Admin Login</h2>
+      <input class="admin-input" type="password" id="admin-pass" placeholder="Admin password" style="text-align:center;margin-top:8px;" onkeydown="if(event.key==='Enter')adminLogin()"/>
+      <button class="btn-save" onclick="adminLogin()" style="width:100%;margin-top:6px;">Login</button>
+      <p style="margin-top:10px;font-size:.76rem;color:#aaa;">Default: pace2024</p>
+    </div>
+  </div>
+  <div id="admin-dashboard" style="display:none;">
+    <div class="admin-header">
+      <h2>⚙️ Pace Bakers Admin</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="admin-close" onclick="closeAdmin()">✕ Close</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="showAdminTab('orders',this)">📦 Orders</button>
+        <button class="admin-tab" onclick="showAdminTab('products',this)">🍰 Products</button>
+        <button class="admin-tab" onclick="showAdminTab('categories',this)">📂 Categories</button>
+        <button class="admin-tab" onclick="showAdminTab('payments',this)">💳 Payments</button>
+        <button class="admin-tab" onclick="showAdminTab('settings',this)">⚙️ Settings</button>
+      </div>
+
+      <!-- ORDERS -->
+      <div class="admin-section active" id="tab-orders">
+        <div class="stats-grid" id="order-stats-grid"></div>
+        <div class="admin-card">
+          <h3>📦 All Orders</h3>
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <select class="admin-input" id="filter-status" style="margin:0;width:auto;" onchange="renderAdminOrders()"><option value="">All Statuses</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="preparing">Preparing</option><option value="ready">Ready</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option></select>
+            <select class="admin-input" id="filter-type" style="margin:0;width:auto;" onchange="renderAdminOrders()"><option value="">All Types</option><option value="web">Web</option><option value="custom">Custom</option></select>
+            <select class="admin-input" id="filter-pay" style="margin:0;width:auto;" onchange="renderAdminOrders()"><option value="">All Payments</option><option value="jazzcash">JazzCash</option><option value="easypaisa">Easypaisa</option><option value="cod">COD</option></select>
+            <input class="admin-input" type="text" id="filter-search" placeholder="Search name/phone/order#" style="margin:0;flex:1;min-width:150px;" oninput="renderAdminOrders()"/>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="admin-table">
+              <thead><tr><th>Order #</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="admin-orders-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="admin-section" id="tab-products">
+        <div class="admin-card">
+          <h3>➕ Add New Product</h3>
+          <div class="admin-form-row">
+            <div><input class="admin-input" type="text" id="ap-name" placeholder="Product Name"/><input class="admin-input" type="text" id="ap-emoji" placeholder="Emoji e.g. 🎂"/><select class="admin-input" id="ap-category"></select></div>
+            <div><input class="admin-input" type="number" id="ap-price" placeholder="Price (Rs)"/><input class="admin-input" type="number" id="ap-discount" placeholder="Discount % (0 = none)"/><select class="admin-input" id="ap-badge"><option value="">No Badge</option><option value="bestseller">Bestseller</option><option value="new">New</option><option value="discount">On Sale</option></select></div>
+          </div>
+          <input class="admin-input" type="text" id="ap-desc" placeholder="Short Description"/>
+          <button class="btn-save" onclick="addProduct()">➕ Add Product</button>
+        </div>
+        <div class="admin-card">
+          <h3>📋 All Products</h3>
+          <div style="overflow-x:auto;"><table class="admin-table"><thead><tr><th>Icon</th><th>Name</th><th>Category</th><th>Price</th><th>Disc%</th><th>Actions</th></tr></thead><tbody id="admin-products-body"></tbody></table></div>
+        </div>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="admin-section" id="tab-categories">
+        <div class="admin-card">
+          <h3>➕ Add Category</h3>
+          <div class="admin-form-row">
+            <input class="admin-input" type="text" id="ac-name" placeholder="Category Name"/>
+            <input class="admin-input" type="text" id="ac-emoji" placeholder="Emoji"/>
+          </div>
+          <button class="btn-save" onclick="addCategory()">Add Category</button>
+        </div>
+        <div class="admin-card"><h3>📂 All Categories</h3><table class="admin-table"><thead><tr><th>Icon</th><th>Name</th><th>Actions</th></tr></thead><tbody id="admin-cats-body"></tbody></table></div>
+      </div>
+
+      <!-- PAYMENTS -->
+      <div class="admin-section" id="tab-payments">
+        <div class="admin-card">
+          <h3>📱 JazzCash Settings</h3>
+          <div class="settings-row"><label>Account Number</label><input type="text" id="s-jc-num" placeholder="03XX XXXXXXX"/></div>
+          <div class="settings-row"><label>Account Name</label><input type="text" id="s-jc-name" placeholder="Account Holder Name"/></div>
+        </div>
+        <div class="admin-card">
+          <h3>💚 Easypaisa Settings</h3>
+          <div class="settings-row"><label>Account Number</label><input type="text" id="s-ep-num" placeholder="03XX XXXXXXX"/></div>
+          <div class="settings-row"><label>Account Name</label><input type="text" id="s-ep-name" placeholder="Account Holder Name"/></div>
+          <button class="btn-save" onclick="savePaymentSettings()">💾 Save Payment Settings</button>
+        </div>
+        <div class="admin-card">
+          <h3>💳 Payment Transactions</h3>
+          <div style="overflow-x:auto;">
+            <table class="admin-table">
+              <thead><tr><th>Order #</th><th>Customer</th><th>Method</th><th>Txn ID</th><th>Amount</th><th>Status</th><th>Verify</th></tr></thead>
+              <tbody id="payment-txn-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="admin-section" id="tab-settings">
+        <div class="admin-card">
+          <h3>📞 Contact &amp; Social</h3>
+          <div class="settings-row"><label>WhatsApp No.</label><input type="text" id="s-wa"/></div>
+          <div class="settings-row"><label>Phone Display</label><input type="text" id="s-phone"/></div>
+          <div class="settings-row"><label>Email</label><input type="text" id="s-email"/></div>
+          <div class="settings-row"><label>Instagram URL</label><input type="text" id="s-insta"/></div>
+          <div class="settings-row"><label>Facebook URL</label><input type="text" id="s-fb"/></div>
+          <div class="settings-row"><label>Address</label><input type="text" id="s-address"/></div>
+          <div class="settings-row"><label>Opening Hours</label><input type="text" id="s-hours"/></div>
+        </div>
+        <div class="admin-card">
+          <h3>📢 Announcement Banner</h3>
+          <input class="admin-input" type="text" id="s-announcement" placeholder="Leave blank to hide banner"/>
+          <button class="btn-save" onclick="saveSettings()">💾 Save All Settings</button>
+        </div>
+        <div class="admin-card">
+          <h3>🔐 Change Password</h3>
+          <input class="admin-input" type="password" id="s-newpass" placeholder="New Password (min 4 chars)"/>
+          <button class="btn-save" onclick="changePassword()">Change Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAAS OWNER PANEL -->
+<div id="saas-panel">
+  <div id="saas-login-screen">
+    <div class="saas-login-wrap">
+      <div style="font-size:3rem;margin-bottom:10px;">👑</div>
+      <h2>SaaS Owner Login</h2>
+      <input class="saas-input" type="password" id="saas-pass" placeholder="Owner password" style="text-align:center;margin-top:8px;" onkeydown="if(event.key==='Enter')saasLogin()"/>
+      <button onclick="saasLogin()" style="width:100%;margin-top:8px;background:#f1c40f;color:#0f172a;border:none;border-radius:10px;padding:10px;font-weight:700;font-size:.95rem;cursor:pointer;">Login as Owner</button>
+      <p style="margin-top:10px;font-size:.75rem;color:#64748b;">Default: owner2024</p>
+    </div>
+  </div>
+  <div id="saas-dashboard" style="display:none;">
+    <div class="saas-header">
+      <h2>👑 BakerSaaS Control Panel</h2>
+      <button onclick="closeSaas()" style="background:none;border:2px solid #475569;color:#94a3b8;border-radius:8px;padding:5px 14px;cursor:pointer;font-size:.86rem;">✕ Close</button>
+    </div>
+    <div class="saas-body">
+      <div class="saas-stats" id="saas-stats-grid"></div>
+      <div class="saas-card">
+        <h3>➕ Add New Shop</h3>
+        <div class="saas-form-row">
+          <div>
+            <input class="saas-input" type="text" id="ns-name" placeholder="Shop Name e.g. Pace Bakers"/>
+            <input class="saas-input" type="text" id="ns-owner" placeholder="Owner Name"/>
+            <input class="saas-input" type="text" id="ns-phone" placeholder="Phone Number"/>
+          </div>
+          <div>
+            <input class="saas-input" type="email" id="ns-email" placeholder="Email Address"/>
+            <input class="saas-input" type="text" id="ns-city" placeholder="City"/>
+            <select class="saas-input" id="ns-plan">
+              <option value="monthly">Monthly – Rs 2,500/mo</option>
+              <option value="quarterly">Quarterly – Rs 6,500/3mo</option>
+              <option value="yearly">Yearly – Rs 22,000/yr</option>
+            </select>
+          </div>
+        </div>
+        <input class="saas-input" type="date" id="ns-expiry" placeholder="Subscription Expiry"/>
+        <button onclick="addShop()" style="background:#f1c40f;color:#0f172a;border:none;border-radius:10px;padding:10px 24px;font-weight:700;cursor:pointer;">➕ Add Shop</button>
+      </div>
+      <div class="saas-card">
+        <h3>🏪 All Shops</h3>
+        <div style="overflow-x:auto;">
+          <table class="saas-table">
+            <thead><tr><th>Shop</th><th>Owner</th><th>Plan</th><th>Expiry</th><th>Revenue</th><th>Status</th><th>Controls</th></tr></thead>
+            <tbody id="saas-shops-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="saas-card">
+        <h3>💰 Revenue Tracker</h3>
+        <div id="saas-revenue-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;"></div>
+      </div>
+      <div class="saas-card">
+        <h3>🔔 Expiring Soon (Next 7 Days)</h3>
+        <div id="saas-expiring"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST & PRINT -->
+<div class="toast" id="toast"></div>
+<div id="print-area"></div>
+
+<!-- SECRET SAAS TRIGGER (triple-click footer) -->
+<div id="saas-trigger" onclick="saasClick()" style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:60px;height:10px;cursor:default;z-index:80;"></div>
+
+<script>
+// ============ STORE ============
+const S = {
+  password: 'pace2024',
+  saasPassword: 'owner2024',
+  settings: {
+    wa:'923111727333', phone:'+92 311 1727333', email:'pacedadu@gmail.com',
+    insta:'https://www.instagram.com/pacebakers', fb:'https://www.facebook.com/pacebakers',
+    address:'Kachehari Road, Dadu, Pakistan, 76200', hours:'Open Daily – Morning to Evening',
+    announcement:'Special offer: 20% off on all custom cakes! Call: +92 311 1727333'
+  },
+  payments: {
+    jazzcash: { number:'03111727333', name:'Pace Bakers' },
+    easypaisa: { number:'03111727333', name:'Pace Bakers' }
+  },
+  categories:[
+    {id:1,name:'All',emoji:'🌟'},{id:2,name:'Cakes',emoji:'🎂'},{id:3,name:'Custom Cakes',emoji:'🎨'},
+    {id:4,name:'Sweets',emoji:'🍬'},{id:5,name:'Pastries',emoji:'🥐'},{id:6,name:'Cookies',emoji:'🍪'},{id:7,name:'Bread',emoji:'🍞'}
+  ],
+  products:[
+    {id:1,name:'Classic Birthday Cake',emoji:'🎂',category:'Cakes',price:1200,discount:0,badge:'bestseller',desc:'Classic sponge cake with cream frosting.'},
+    {id:2,name:'Chocolate Truffle Cake',emoji:'🍫',category:'Cakes',price:1800,discount:15,badge:'new',desc:'Rich dark chocolate layers with ganache.'},
+    {id:3,name:'Red Velvet Cake',emoji:'❤️',category:'Cakes',price:1500,discount:10,badge:'',desc:'Velvety red sponge with cream cheese frosting.'},
+    {id:4,name:'Custom Wedding Cake',emoji:'💍',category:'Custom Cakes',price:5000,discount:0,badge:'bestseller',desc:'Elegant multi-tier wedding cake.'},
+    {id:5,name:'Themed Birthday Cake',emoji:'🎉',category:'Custom Cakes',price:2500,discount:0,badge:'new',desc:'Custom-designed themed cake for any occasion.'},
+    {id:6,name:'Gulab Jamun',emoji:'🟤',category:'Sweets',price:300,discount:0,badge:'bestseller',desc:'Soft syrup-soaked sweets. Per dozen.'},
+    {id:7,name:'Barfi Box',emoji:'🍬',category:'Sweets',price:450,discount:20,badge:'discount',desc:'Assorted mithai box 500g — for gifting.'},
+    {id:8,name:'Croissant',emoji:'🥐',category:'Pastries',price:150,discount:0,badge:'new',desc:'Buttery flaky fresh-baked croissant.'},
+    {id:9,name:'Eclair',emoji:'🍩',category:'Pastries',price:120,discount:0,badge:'',desc:'Custard-filled chocolate-topped eclair.'},
+    {id:10,name:'Butter Cookies Box',emoji:'🍪',category:'Cookies',price:350,discount:10,badge:'',desc:'Melt-in-mouth butter cookies. 250g box.'},
+    {id:11,name:'Whole Wheat Bread',emoji:'🍞',category:'Bread',price:180,discount:0,badge:'',desc:'Freshly baked soft whole wheat loaf.'},
+    {id:12,name:'Pineapple Cake',emoji:'🍍',category:'Cakes',price:1400,discount:0,badge:'',desc:'Light sponge with pineapple cream filling.'},
+  ],
+  orders:[],
+  cart:[],
+  orderCounter:1,
+  // SaaS
+  saasShops:[
+    {id:1, name:'Pace Bakers & Sweets', owner:'Shop Owner', phone:'+92 311 1727333', email:'pacedadu@gmail.com', city:'Dadu', plan:'monthly', expiry:'2025-06-30', status:'active', revenue:0, orders:0},
+  ],
+  currentShopId:1,
+  saasOwnerPassword:'owner2024'
+};
+
+// ============ HELPERS ============
+const disc=(p,d)=>d>0?Math.round(p-p*d/100):p;
+const genNum=()=>'PB-'+String(S.orderCounter++).padStart(7,'0');
+const fmtDate=d=>new Date(d).toLocaleDateString('en-PK',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+const fmtDateShort=d=>new Date(d).toLocaleDateString('en-PK',{day:'2-digit',month:'short',year:'numeric'});
+const showToast=msg=>{const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);};
+const closeModal=id=>document.getElementById(id).classList.remove('open');
+const toggleMenu=()=>{const m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';};
+
+// ============ SUBSCRIPTION CHECK ============
+function checkSubscription(){
+  const shop=S.saasShops.find(s=>s.id===S.currentShopId);
+  if(!shop)return;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const exp=new Date(shop.expiry); exp.setHours(0,0,0,0);
+  if(shop.status==='suspended'||(shop.status!=='active'&&exp<today)){
+    document.getElementById('lock-screen').classList.add('show');
+    document.getElementById('lock-msg').textContent=shop.status==='suspended'?'This shop has been suspended by the administrator. Please contact support to resolve.':'This shop\'s subscription has expired on '+fmtDateShort(shop.expiry)+'. Please renew to continue.';
+    document.getElementById('lock-wa').href='https://wa.me/'+S.settings.wa.replace(/\D/g,'');
+    return false;
+  }
+  document.getElementById('lock-screen').classList.remove('show');
+  return true;
+}
+
+// ============ INIT ============
+function init(){
+  applySettings(); applyPaymentDisplays();
+  renderCategories(); renderProducts('All'); renderFooterCats();
+  loadAdminSettings(); loadPaymentSettings();
+  renderAdminProducts(); renderAdminCategories(); populateCategoryDropdown();
+  seedDemoOrders(); renderAdminOrders(); renderOrderStats(); renderPaymentTxns();
+  renderSaasShops(); renderSaasStats();
+  checkSubscription();
+}
+
+// ============ SETTINGS ============
+function applySettings(){
+  const s=S.settings;
+  const waUrl=`https://wa.me/${s.wa.replace(/\D/g,'')}`;
+  document.getElementById('wa-float-btn').href=waUrl;
+  document.getElementById('wa-link').href=waUrl;
+  document.getElementById('wa-custom-link').href=waUrl;
+  document.getElementById('insta-link').href=s.insta;
+  document.getElementById('fb-link').href=s.fb;
+  document.getElementById('contact-phone').textContent=s.phone;
+  document.getElementById('contact-phone-link').href=`tel:${s.wa}`;
+  document.getElementById('contact-email').textContent=s.email;
+  document.getElementById('contact-email-link').href=`mailto:${s.email}`;
+  document.getElementById('contact-address').textContent=s.address;
+  document.getElementById('contact-hours').textContent=s.hours;
+  document.getElementById('footer-phone').textContent='📞 '+s.phone;
+  document.getElementById('footer-phone').href=`tel:${s.wa}`;
+  document.getElementById('footer-email').textContent='✉️ '+s.email;
+  document.getElementById('footer-email').href=`mailto:${s.email}`;
+  const ann=document.getElementById('announcement-bar');
+  if(s.announcement){document.getElementById('announcement-text').textContent=s.announcement;ann.style.display='block';}
+  else ann.style.display='none';
+}
+function applyPaymentDisplays(){
+  const jc=S.payments.jazzcash; const ep=S.payments.easypaisa;
+  document.getElementById('jc-num-display').textContent=jc.number;
+  document.getElementById('ep-num-display').textContent=ep.number;
+  document.getElementById('jc-num-instr').textContent=jc.number;
+  document.getElementById('ep-num-instr').textContent=ep.number;
+  document.getElementById('jc-name').textContent=jc.name;
+  document.getElementById('ep-name').textContent=ep.name;
+}
+function saveSettings(){
+  S.settings.wa=document.getElementById('s-wa').value;
+  S.settings.phone=document.getElementById('s-phone').value;
+  S.settings.email=document.getElementById('s-email').value;
+  S.settings.insta=document.getElementById('s-insta').value;
+  S.settings.fb=document.getElementById('s-fb').value;
+  S.settings.address=document.getElementById('s-address').value;
+  S.settings.hours=document.getElementById('s-hours').value;
+  S.settings.announcement=document.getElementById('s-announcement').value;
+  applySettings(); showToast('Settings saved! ✅');
+}
+function loadAdminSettings(){
+  const s=S.settings;
+  document.getElementById('s-wa').value=s.wa;
+  document.getElementById('s-phone').value=s.phone;
+  document.getElementById('s-email').value=s.email;
+  document.getElementById('s-insta').value=s.insta;
+  document.getElementById('s-fb').value=s.fb;
+  document.getElementById('s-address').value=s.address;
+  document.getElementById('s-hours').value=s.hours;
+  document.getElementById('s-announcement').value=s.announcement;
+}
+function savePaymentSettings(){
+  S.payments.jazzcash.number=document.getElementById('s-jc-num').value;
+  S.payments.jazzcash.name=document.getElementById('s-jc-name').value;
+  S.payments.easypaisa.number=document.getElementById('s-ep-num').value;
+  S.payments.easypaisa.name=document.getElementById('s-ep-name').value;
+  applyPaymentDisplays(); showToast('Payment settings saved! ✅');
+}
+function loadPaymentSettings(){
+  document.getElementById('s-jc-num').value=S.payments.jazzcash.number;
+  document.getElementById('s-jc-name').value=S.payments.jazzcash.name;
+  document.getElementById('s-ep-num').value=S.payments.easypaisa.number;
+  document.getElementById('s-ep-name').value=S.payments.easypaisa.name;
+}
+function changePassword(){
+  const np=document.getElementById('s-newpass').value;
+  if(np.length>=4){S.password=np;showToast('Password changed!');}
+  else showToast('Password too short!');
+}
+
+// ============ CATEGORIES ============
+function renderCategories(){
+  document.getElementById('cat-grid').innerHTML=S.categories.map((c,i)=>`
+    <div class="cat-card${i===0?' active':''}" onclick="filterCat('${c.name}',this)">
+      <div class="cat-icon">${c.emoji}</div><div class="cat-name">${c.name}</div></div>`).join('');
+}
+function filterCat(name,el){
+  document.querySelectorAll('.cat-card').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  renderProducts(name);
+  document.getElementById('active-cat-label').textContent=name==='All'?'All Items':name;
+  document.getElementById('products-heading').textContent=name==='All'?'Our Full Menu':name;
+}
+function renderFooterCats(){
+  document.getElementById('footer-cats').innerHTML=S.categories.filter(c=>c.name!=='All').map(c=>`<li><a href="#menu">${c.emoji} ${c.name}</a></li>`).join('');
+}
+function addCategory(){
+  const name=document.getElementById('ac-name').value.trim();const emoji=document.getElementById('ac-emoji').value||'📦';
+  if(!name){showToast('Name required!');return;}
+  S.categories.push({id:Date.now(),name,emoji});
+  renderAdminCategories();renderCategories();renderFooterCats();populateCategoryDropdown();
+  document.getElementById('ac-name').value='';document.getElementById('ac-emoji').value='';showToast('Category added!');
+}
+function deleteCategory(id){S.categories=S.categories.filter(c=>c.id!==id);renderAdminCategories();renderCategories();renderFooterCats();}
+function renderAdminCategories(){
+  document.getElementById('admin-cats-body').innerHTML=S.categories.map(c=>`
+    <tr><td>${c.emoji}</td><td>${c.name}</td><td>${c.name!=='All'?`<button class="btn-del" onclick="deleteCategory(${c.id})">Del</button>`:''}</td></tr>`).join('');
+  populateCategoryDropdown();
+}
+function populateCategoryDropdown(){
+  const sel=document.getElementById('ap-category');
+  if(sel)sel.innerHTML=S.categories.filter(c=>c.name!=='All').map(c=>`<option>${c.name}</option>`).join('');
+}
+
+// ============ PRODUCTS ============
+function renderProducts(cat){
+  const grid=document.getElementById('product-grid');
+  const items=cat==='All'?S.products:S.products.filter(p=>p.category===cat);
+  if(!items.length){grid.innerHTML='<p style="text-align:center;color:#aaa;grid-column:1/-1;padding:40px;">No items in this category yet.</p>';return;}
+  grid.innerHTML=items.map(p=>{
+    const dp=disc(p.price,p.discount);
+    const badge=p.badge?`<span class="product-badge badge-${p.badge}">${p.badge==='bestseller'?'⭐ Bestseller':p.badge==='new'?'🆕 New':'🔖 On Sale'}</span>`:'';
+    const priceHtml=p.discount>0?`<span class="price-now">Rs ${dp}</span><span class="price-original">Rs ${p.price}</span><span class="discount-chip">-${p.discount}%</span>`:`<span class="price-now">Rs ${p.price}</span>`;
+    const cartItem=S.cart.find(c=>c.id===p.id);
+    const qtyVal=cartItem?cartItem.qty:0;
+    return `<div class="product-card" id="pcard-${p.id}">
+      <div class="product-img">${p.emoji}</div>
+      <div class="product-body">
+        ${badge}
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-price-row">${priceHtml}</div>
+        <div class="qty-row">
+          <button class="qty-btn" onclick="changeQty(${p.id},-1)">−</button>
+          <span class="qty-display" id="qty-${p.id}">${qtyVal}</span>
+          <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+        </div>
+        <button class="btn-cart" onclick="addToCart(${p.id})">🛒 Add to Cart</button>
+        <button class="btn-wa-sm" onclick="quickWA(${p.id})">💬 Quick WhatsApp</button>
+      </div></div>`;
+  }).join('');
+}
+function changeQty(pid,delta){
+  const el=document.getElementById('qty-'+pid);
+  if(!el)return;
+  let v=parseInt(el.textContent)||0;
+  v=Math.max(0,v+delta);
+  el.textContent=v;
+}
+function addToCart(pid){
+  const p=S.products.find(x=>x.id===pid);
+  const qtyEl=document.getElementById('qty-'+pid);
+  const qty=qtyEl?parseInt(qtyEl.textContent)||1:1;
+  if(qty<=0){showToast('Set quantity first!');return;}
+  const dp=disc(p.price,p.discount);
+  const existing=S.cart.find(c=>c.id===pid);
+  if(existing){existing.qty+=qty;existing.price=dp;}
+  else S.cart.push({id:p.id,name:p.name,emoji:p.emoji,qty,price:dp});
+  updateCartCount();
+  if(qtyEl)qtyEl.textContent=0;
+  showToast(`${p.emoji} ${p.name} × ${qty} added to cart!`);
+  renderCartSidebar();
+}
+function quickWA(pid){
+  const p=S.products.find(x=>x.id===pid);const dp=disc(p.price,p.discount);
+  const msg=`Hi Pace Bakers! I'd like to order:\n🎂 *${p.name}*\nPrice: Rs ${dp}\n\nPlease confirm.`;
+  window.open(`https://wa.me/${S.settings.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+function addProduct(){
+  const name=document.getElementById('ap-name').value.trim();
+  const emoji=document.getElementById('ap-emoji').value||'🍰';
+  const cat=document.getElementById('ap-category').value;
+  const price=parseInt(document.getElementById('ap-price').value)||0;
+  const discount=parseInt(document.getElementById('ap-discount').value)||0;
+  const badge=document.getElementById('ap-badge').value;
+  const desc=document.getElementById('ap-desc').value||'';
+  if(!name||!price){showToast('Name and price required!');return;}
+  S.products.push({id:Date.now(),name,emoji,category:cat,price,discount,badge,desc});
+  renderAdminProducts();renderProducts('All');showToast('Product added! ✅');
+  ['ap-name','ap-emoji','ap-price','ap-discount','ap-desc'].forEach(id=>document.getElementById(id).value='');
+}
+function deleteProduct(id){if(!confirm('Delete this product?'))return;S.products=S.products.filter(p=>p.id!==id);renderAdminProducts();renderProducts('All');showToast('Deleted.');}
+function editProduct(id){
+  const p=S.products.find(x=>x.id===id);
+  const np=prompt('New price for '+p.name+' (Rs):',p.price);
+  if(np!==null)p.price=parseInt(np)||p.price;
+  const nd=prompt('New discount % (0 for none):',p.discount);
+  if(nd!==null)p.discount=parseInt(nd)||0;
+  renderAdminProducts();renderProducts('All');showToast('Updated! ✅');
+}
+function renderAdminProducts(){
+  document.getElementById('admin-products-body').innerHTML=S.products.map(p=>`
+    <tr><td>${p.emoji}</td><td>${p.name}</td><td>${p.category}</td><td>Rs ${p.price}</td><td>${p.discount}%</td>
+    <td><button class="btn-edit" onclick="editProduct(${p.id})">Edit</button><button class="btn-del" onclick="deleteProduct(${p.id})">Del</button></td></tr>`).join('');
+}
+
+// ============ CART ============
+function updateCartCount(){document.getElementById('cart-count').textContent=S.cart.reduce((a,b)=>a+b.qty,0);}
+function openCart(){renderCartSidebar();document.getElementById('cart-sidebar').classList.add('open');document.getElementById('cart-overlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCart(){document.getElementById('cart-sidebar').classList.remove('open');document.getElementById('cart-overlay').classList.remove('open');document.body.style.overflow='';}
+function renderCartSidebar(){
+  const body=document.getElementById('cart-sidebar-body');
+  if(!S.cart.length){body.innerHTML='<div style="text-align:center;padding:40px;color:#aaa;"><div style="font-size:3rem;">🛒</div><p style="margin-top:10px;">Your cart is empty</p><p style="font-size:.82rem;margin-top:5px;">Add items from the menu!</p></div>';document.getElementById('cart-sidebar-total').textContent='Rs 0';return;}
+  let total=0;
+  body.innerHTML=S.cart.map((item,i)=>{
+    const sub=item.price*item.qty;total+=sub;
+    return `<div class="cart-item">
+      <div class="cart-item-emoji">${item.emoji}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">Rs ${item.price} each</div>
+        <div class="cart-item-controls">
+          <button class="ci-btn" onclick="cartQty(${i},-1)">−</button>
+          <span class="ci-qty">${item.qty}</span>
+          <button class="ci-btn" onclick="cartQty(${i},1)">+</button>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+        <span class="cart-item-total">Rs ${sub}</span>
+        <button class="cart-remove" onclick="removeCartItem(${i})">🗑️</button>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('cart-sidebar-total').textContent='Rs '+total;
+}
+function cartQty(i,delta){
+  S.cart[i].qty=Math.max(1,S.cart[i].qty+delta);
+  updateCartCount();renderCartSidebar();
+}
+function removeCartItem(i){S.cart.splice(i,1);updateCartCount();renderCartSidebar();}
+function checkoutWhatsApp(){
+  if(!S.cart.length){showToast('Cart is empty!');return;}
+  let msg='🛒 *Order from Pace Bakers Website*\n\n';let total=0;
+  S.cart.forEach(i=>{msg+=`• ${i.emoji} ${i.name} × ${i.qty} = Rs ${i.price*i.qty}\n`;total+=i.price*i.qty;});
+  msg+=`\n*Total: Rs ${total}*\n\nPlease confirm my order.`;
+  window.open(`https://wa.me/${S.settings.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+// ============ CHECKOUT ============
+let selectedPayment='';
+function openCheckout(){
+  if(!S.cart.length){showToast('Cart is empty!');return;}
+  const total=S.cart.reduce((s,i)=>s+i.price*i.qty,0);
+  document.getElementById('checkout-total-display').textContent='Rs '+total;
+  document.getElementById('jc-amount').textContent='Rs '+total;
+  document.getElementById('ep-amount').textContent='Rs '+total;
+  // Cart summary
+  document.getElementById('checkout-items-summary').innerHTML=S.cart.map(i=>`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #e8ddd0;"><span>${i.emoji} ${i.name} × ${i.qty}</span><span style="font-weight:700;">Rs ${i.price*i.qty}</span></div>`).join('')+`<div style="display:flex;justify-content:space-between;padding:6px 0;font-weight:700;color:var(--pink);"><span>Total</span><span>Rs ${total}</span></div>`;
+  selectedPayment='';
+  ['pay-jazzcash','pay-easypaisa','pay-cod'].forEach(id=>document.getElementById(id).classList.remove('selected'));
+  ['jazzcash-instructions','easypaisa-instructions'].forEach(id=>document.getElementById(id).classList.remove('show'));
+  document.getElementById('cod-instructions').classList.remove('show');
+  document.getElementById('txn-id-section').style.display='none';
+  ['co-name','co-phone','co-address','co-notes','co-txn'].forEach(id=>document.getElementById(id).value='');
+  closeCart();
+  document.getElementById('checkout-modal').classList.add('open');
+}
+function selectPayment(method){
+  selectedPayment=method;
+  ['pay-jazzcash','pay-easypaisa','pay-cod'].forEach(id=>document.getElementById(id).classList.remove('selected'));
+  document.getElementById('pay-'+method).classList.add('selected');
+  document.getElementById('jazzcash-instructions').classList.remove('show');
+  document.getElementById('easypaisa-instructions').classList.remove('show');
+  document.getElementById('cod-instructions').classList.remove('show');
+  document.getElementById('txn-id-section').style.display='none';
+  if(method==='jazzcash'){document.getElementById('jazzcash-instructions').classList.add('show');document.getElementById('txn-id-section').style.display='block';}
+  else if(method==='easypaisa'){document.getElementById('easypaisa-instructions').classList.add('show');document.getElementById('txn-id-section').style.display='block';}
+  else if(method==='cod'){document.getElementById('cod-instructions').classList.add('show');}
+}
+function submitCheckoutOrder(){
+  const name=document.getElementById('co-name').value.trim();
+  const phone=document.getElementById('co-phone').value.trim();
+  const address=document.getElementById('co-address').value.trim();
+  if(!name||!phone||!address){showToast('Please fill name, phone & address!');return;}
+  if(!selectedPayment){showToast('Please select a payment method!');return;}
+  const txn=document.getElementById('co-txn').value.trim();
+  if((selectedPayment==='jazzcash'||selectedPayment==='easypaisa')&&!txn){showToast('Please enter your Transaction ID!');return;}
+  const total=S.cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const payStatus=selectedPayment==='cod'?'cod_pending':'pending_verification';
+  const order={
+    orderNum:genNum(), date:Date.now(), type:'web',
+    customer:{name,phone,address},
+    items:[...S.cart],
+    notes:document.getElementById('co-notes').value,
+    total, status:'pending',
+    payment:{method:selectedPayment, txnId:txn, status:payStatus, amount:total}
+  };
+  S.orders.unshift(order);
+  S.cart=[];updateCartCount();
+  closeModal('checkout-modal');
+  showReceipt(order);
+  renderAdminOrders();renderOrderStats();renderPaymentTxns();
+  // Update SaaS revenue
+  const shop=S.saasShops.find(s=>s.id===S.currentShopId);
+  if(shop){shop.revenue+=total;shop.orders++;}
+  renderSaasStats();renderSaasShops();
+}
+
+// ============ CUSTOM ORDER ============
+function openCustomOrder(){document.getElementById('custom-modal').classList.add('open');}
+function submitCustomWebOrder(){
+  const name=document.getElementById('cust-name').value.trim();
+  const phone=document.getElementById('cust-phone').value.trim();
+  if(!name||!phone){showToast('Name and phone required!');return;}
+  const order={
+    orderNum:genNum(), date:Date.now(), type:'custom',
+    customer:{name,phone,address:'N/A'},
+    items:[{name:'Custom Cake',emoji:'🎨',qty:1,price:0}],
+    customDetails:{theme:document.getElementById('cust-theme').value,flavor:document.getElementById('cust-flavor').value,size:document.getElementById('cust-size').value,message:document.getElementById('cust-message').value,date:document.getElementById('cust-date').value,notes:document.getElementById('cust-notes').value},
+    notes:'Custom Cake Order', total:0, status:'pending',
+    payment:{method:'cod',txnId:'',status:'price_on_confirmation',amount:0}
+  };
+  S.orders.unshift(order);
+  closeModal('custom-modal');
+  showReceipt(order);
+  renderAdminOrders();renderOrderStats();
+}
+function submitCustomWA(){
+  const name=document.getElementById('cust-name').value||'Customer';const phone=document.getElementById('cust-phone').value;
+  const msg=`🎨 *Custom Cake Order*\n\n👤 ${name} | 📞 ${phone}\n🎭 Theme: ${document.getElementById('cust-theme').value}\n🍰 Flavor: ${document.getElementById('cust-flavor').value}\n⚖️ Size: ${document.getElementById('cust-size').value}\n✍️ Message: ${document.getElementById('cust-message').value}\n📅 Needed By: ${document.getElementById('cust-date').value}\n📝 Notes: ${document.getElementById('cust-notes').value}`;
+  window.open(`https://wa.me/${S.settings.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+  closeModal('custom-modal');showToast('Sent via WhatsApp! 🎂');
+}
+
+// ============ RECEIPT ============
+let lastReceipt=null;
+function payMethodLabel(m){
+  if(m==='jazzcash')return '📱 JazzCash';
+  if(m==='easypaisa')return '💚 Easypaisa';
+  if(m==='cod')return '💵 Cash on Delivery';
+  return m||'—';
+}
+function payStatusLabel(s){
+  if(s==='cod_pending')return 'COD – Pay on Delivery';
+  if(s==='pending_verification')return '⏳ Awaiting Verification';
+  if(s==='verified')return '✅ Payment Verified';
+  if(s==='price_on_confirmation')return 'Price on Confirmation';
+  return s||'—';
+}
+function buildReceiptHTML(order){
+  const isCustom=order.type==='custom';
+  const itemsHtml=order.items.map(i=>`<div style="display:flex;justify-content:space-between;margin-bottom:5px;font-size:.85rem;"><span>${i.emoji} ${i.name} × ${i.qty}</span><span>${i.price>0?'Rs '+(i.price*i.qty):'TBD'}</span></div>`).join('');
+  const customHtml=isCustom&&order.customDetails?`<div style="background:#f9f5ef;border-radius:10px;padding:11px;margin:9px 0;font-size:.82rem;"><b>Custom Details:</b><br/>🎭 Theme: ${order.customDetails.theme||'—'}<br/>🍰 Flavor: ${order.customDetails.flavor}<br/>⚖️ Size: ${order.customDetails.size}<br/>✍️ Message: ${order.customDetails.message||'—'}<br/>📅 Date: ${order.customDetails.date||'—'}<br/>📝 Notes: ${order.customDetails.notes||'—'}</div>`:'';
+  const pay=order.payment||{};
+  return `<div class="receipt">
+    <div class="receipt-header"><div style="font-size:1.8rem;">🎂</div><h2>Pace Bakers & Sweets</h2><p>Kachehari Road, Dadu | +92 311 1727333</p></div>
+    <div class="receipt-row"><span>Order #</span><span style="color:var(--pink);font-weight:700;">${order.orderNum}</span></div>
+    <div class="receipt-row"><span>Date</span><span>${fmtDate(order.date)}</span></div>
+    <div class="receipt-row"><span>Status</span><span><span class="order-status status-${order.status}">${order.status.toUpperCase()}</span></span></div>
+    <div class="receipt-row"><span>Type</span><span>${isCustom?'🎨 Custom Cake':'🛒 Online Order'}</span></div>
+    <hr style="border:none;border-top:2px dashed #e8ddd0;margin:10px 0;"/>
+    <div class="receipt-row"><span>Customer</span><span>${order.customer.name}</span></div>
+    <div class="receipt-row"><span>Phone</span><span>${order.customer.phone}</span></div>
+    <div class="receipt-row"><span>Address</span><span>${order.customer.address}</span></div>
+    <hr style="border:none;border-top:2px dashed #e8ddd0;margin:10px 0;"/>
+    <div class="receipt-items">${itemsHtml}</div>
+    ${customHtml}
+    ${order.notes?`<div class="receipt-row"><span>Notes</span><span>${order.notes}</span></div>`:''}
+    <div class="receipt-row total"><span>TOTAL</span><span>${order.total>0?'Rs '+order.total:'Price on Confirmation'}</span></div>
+    <hr style="border:none;border-top:2px dashed #e8ddd0;margin:10px 0;"/>
+    <div class="receipt-row"><span>Payment</span><span>${payMethodLabel(pay.method)}</span></div>
+    <div class="receipt-row"><span>Pay Status</span><span>${payStatusLabel(pay.status)}</span></div>
+    ${pay.txnId?`<div class="receipt-row"><span>Txn ID</span><span style="font-family:monospace;font-size:.82rem;">${pay.txnId}</span></div>`:''}
+    <div class="receipt-footer"><p>Thank you for choosing Pace Bakers & Sweets! 🍰</p><p style="margin-top:3px;">Your order #: <b>${order.orderNum}</b></p></div>
+  </div>`;
+}
+function showReceipt(order){
+  lastReceipt=order;
+  document.getElementById('receipt-content').innerHTML=buildReceiptHTML(order);
+  document.getElementById('receipt-modal').classList.add('open');
+  showToast('Order placed! #'+order.orderNum+' 🎉');
+}
+function printReceipt(){
+  if(!lastReceipt)return;
+  const w=window.open('','_blank');
+  w.document.write(`<!DOCTYPE html><html><head><title>Receipt ${lastReceipt.orderNum}</title><style>body{font-family:sans-serif;padding:20px;max-width:380px;margin:0 auto;font-size:13px;}.receipt-header{text-align:center;border-bottom:2px dashed #ccc;padding-bottom:12px;margin-bottom:12px;}.receipt-row{display:flex;justify-content:space-between;margin-bottom:6px;}.receipt-items{background:#f9f5ef;padding:10px;border-radius:8px;margin:8px 0;}.receipt-footer{text-align:center;margin-top:12px;color:#777;font-size:11px;}hr{border:none;border-top:2px dashed #ddd;margin:8px 0;}</style></head><body>${buildReceiptHTML(lastReceipt)}<script>window.print();window.onafterprint=()=>window.close();<\/script></body></html>`);
+  w.document.close();
+}
+function shareReceiptWA(){
+  if(!lastReceipt)return;const o=lastReceipt;const pay=o.payment||{};
+  const items=o.items.map(i=>`• ${i.emoji} ${i.name} × ${i.qty}${i.price>0?' = Rs '+(i.price*i.qty):''}`).join('\n');
+  const msg=`🧾 *My Order Receipt*\n\n*Order #:* ${o.orderNum}\n*Date:* ${fmtDate(o.date)}\n*Status:* ${o.status.toUpperCase()}\n\n*Items:*\n${items}\n\n*Total:* ${o.total>0?'Rs '+o.total:'TBD'}\n*Payment:* ${payMethodLabel(pay.method)}\n${pay.txnId?'*Txn ID:* '+pay.txnId+'\n':''}*Customer:* ${o.customer.name} | ${o.customer.phone}`;
+  window.open(`https://wa.me/${S.settings.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+// ============ TRACK ============
+function trackOrder(){
+  const num=document.getElementById('track-input').value.trim().toUpperCase();
+  const result=document.getElementById('track-result');
+  if(!num){result.innerHTML='<p style="color:#aaa;text-align:center;">Enter an order number.</p>';return;}
+  const order=S.orders.find(o=>o.orderNum===num);
+  if(!order){result.innerHTML=`<div style="text-align:center;padding:18px;background:#ffeaea;border-radius:12px;"><div style="font-size:2rem;">😕</div><p style="color:var(--pink);font-weight:600;margin-top:8px;">Order not found.</p></div>`;return;}
+  lastReceipt=order;
+  result.innerHTML=buildReceiptHTML(order)+`<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;"><button class="btn-save" onclick="printReceipt()">🖨️ Print</button><button class="btn-wa-sm" onclick="shareReceiptWA()" style="border-radius:10px;padding:10px;">💬 Share</button></div>`;
+}
+
+// ============ CONTACT ============
+function sendContactWA(){
+  const msg=`📩 *Message from Website*\n\n👤 ${document.getElementById('cf-name').value||'Customer'} | 📞 ${document.getElementById('cf-phone').value}\n📌 ${document.getElementById('cf-type').value}\n\n${document.getElementById('cf-msg').value}`;
+  window.open(`https://wa.me/${S.settings.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+// ============ ADMIN ORDERS ============
+function renderOrderStats(){
+  const all=S.orders;
+  const pending=all.filter(o=>o.status==='pending').length;
+  const active=all.filter(o=>['confirmed','preparing','ready'].includes(o.status)).length;
+  const delivered=all.filter(o=>o.status==='delivered').length;
+  const revenue=all.filter(o=>o.status!=='cancelled').reduce((s,o)=>s+o.total,0);
+  const unverified=all.filter(o=>o.payment&&o.payment.status==='pending_verification').length;
+  document.getElementById('order-stats-grid').innerHTML=`
+    <div class="stat-card blue"><div class="num">${all.length}</div><div class="lbl">Total Orders</div></div>
+    <div class="stat-card gold"><div class="num">${pending}</div><div class="lbl">Pending</div></div>
+    <div class="stat-card blue"><div class="num">${active}</div><div class="lbl">In Progress</div></div>
+    <div class="stat-card green"><div class="num">${delivered}</div><div class="lbl">Delivered</div></div>
+    <div class="stat-card pink"><div class="num">${unverified}</div><div class="lbl">Unverified Pay</div></div>
+    <div class="stat-card gold"><div class="num">Rs ${revenue}</div><div class="lbl">Revenue</div></div>`;
+}
+function renderAdminOrders(){
+  const statusF=document.getElementById('filter-status').value;
+  const typeF=document.getElementById('filter-type').value;
+  const payF=document.getElementById('filter-pay').value;
+  const search=(document.getElementById('filter-search').value||'').toLowerCase();
+  let orders=[...S.orders];
+  if(statusF)orders=orders.filter(o=>o.status===statusF);
+  if(typeF)orders=orders.filter(o=>o.type===typeF);
+  if(payF)orders=orders.filter(o=>o.payment&&o.payment.method===payF);
+  if(search)orders=orders.filter(o=>o.customer.name.toLowerCase().includes(search)||o.customer.phone.includes(search)||o.orderNum.toLowerCase().includes(search));
+  const tbody=document.getElementById('admin-orders-body');
+  if(!orders.length){tbody.innerHTML='<tr><td colspan="8" style="text-align:center;color:#aaa;padding:22px;">No orders found.</td></tr>';return;}
+  tbody.innerHTML=orders.map(o=>{
+    const pay=o.payment||{};
+    const payLabel=pay.method?`${pay.method==='jazzcash'?'📱':pay.method==='easypaisa'?'💚':'💵'} ${pay.method}`:'—';
+    const payBadge=pay.status==='verified'?'<span style="color:var(--green);font-size:.75rem;">✅ Verified</span>':pay.status==='pending_verification'?'<span style="color:orange;font-size:.75rem;">⏳ Verify</span>':pay.status==='cod_pending'?'<span style="color:#666;font-size:.75rem;">COD</span>':'<span style="font-size:.75rem;">—</span>';
+    return `<tr>
+      <td style="font-weight:700;color:var(--pink);font-size:.82rem;">${o.orderNum}</td>
+      <td style="font-size:.78rem;">${fmtDate(o.date)}</td>
+      <td><b style="font-size:.86rem;">${o.customer.name}</b><br/><span style="font-size:.75rem;color:#aaa;">${o.customer.phone}</span></td>
+      <td style="font-size:.82rem;">${o.items.map(i=>`${i.emoji}${i.name}×${i.qty}`).join(', ')}</td>
+      <td style="font-weight:700;">${o.total>0?'Rs '+o.total:'TBD'}</td>
+      <td style="font-size:.8rem;">${payLabel}<br/>${payBadge}</td>
+      <td><select class="status-select" onchange="updateOrderStatus('${o.orderNum}',this.value)">${['pending','confirmed','preparing','ready','delivered','cancelled'].map(s=>`<option value="${s}"${o.status===s?' selected':''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('')}</select></td>
+      <td><button class="btn-view" onclick="adminViewOrder('${o.orderNum}')">View</button><button class="btn-del" onclick="adminDelOrder('${o.orderNum}')">Del</button></td>
+    </tr>`;
+  }).join('');
+}
+function updateOrderStatus(num,status){
+  const o=S.orders.find(x=>x.orderNum===num);
+  if(o){o.status=status;renderOrderStats();showToast('Status: '+status);}
+}
+function adminViewOrder(num){
+  const o=S.orders.find(x=>x.orderNum===num);if(!o)return;
+  lastReceipt=o;
+  const pay=o.payment||{};
+  const verifyBtn=pay.status==='pending_verification'?`<button class="btn-save" onclick="verifyPayment('${num}')" style="margin-top:10px;width:100%;">✅ Verify Payment</button>`:'';
+  document.getElementById('admin-order-detail').innerHTML=buildReceiptHTML(o)+verifyBtn+`<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;"><button class="btn-save" onclick="printReceipt()">🖨️ Print</button><button class="btn-wa-sm" onclick="shareReceiptWA()" style="border-radius:10px;padding:10px;">💬 Share</button></div>`;
+  document.getElementById('admin-order-modal').classList.add('open');
+}
+function verifyPayment(num){
+  const o=S.orders.find(x=>x.orderNum===num);
+  if(o&&o.payment){o.payment.status='verified';renderAdminOrders();renderOrderStats();renderPaymentTxns();showToast('Payment verified! ✅');closeModal('admin-order-modal');}
+}
+function adminDelOrder(num){
+  if(!confirm('Delete order '+num+'?'))return;
+  S.orders=S.orders.filter(o=>o.orderNum!==num);
+  renderAdminOrders();renderOrderStats();renderPaymentTxns();showToast('Order deleted.');
+}
+function renderPaymentTxns(){
+  const rows=S.orders.filter(o=>o.payment&&o.payment.method!=='cod');
+  const tbody=document.getElementById('payment-txn-body');
+  if(!rows.length){tbody.innerHTML='<tr><td colspan="7" style="text-align:center;color:#aaa;padding:20px;">No digital payments yet.</td></tr>';return;}
+  tbody.innerHTML=rows.map(o=>{
+    const pay=o.payment;
+    return `<tr>
+      <td style="font-weight:700;color:var(--pink);font-size:.8rem;">${o.orderNum}</td>
+      <td style="font-size:.82rem;">${o.customer.name}<br/><span style="color:#aaa;font-size:.75rem;">${o.customer.phone}</span></td>
+      <td>${pay.method==='jazzcash'?'📱 JazzCash':'💚 Easypaisa'}</td>
+      <td style="font-family:monospace;font-size:.8rem;">${pay.txnId||'—'}</td>
+      <td style="font-weight:700;">Rs ${pay.amount}</td>
+      <td>${pay.status==='verified'?'<span style="color:var(--green);font-weight:700;">✅ Verified</span>':'<span style="color:orange;font-weight:700;">⏳ Pending</span>'}</td>
+      <td>${pay.status!=='verified'?`<button class="btn-edit" onclick="verifyPayment('${o.orderNum}')">Verify</button>`:'<span style="color:var(--green);font-size:.8rem;">Done</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ============ ADMIN PANEL ============
+function openAdmin(){document.getElementById('admin-panel').style.display='block';document.body.style.overflow='hidden';}
+function closeAdmin(){document.getElementById('admin-panel').style.display='none';document.getElementById('admin-login-screen').style.display='block';document.getElementById('admin-dashboard').style.display='none';document.body.style.overflow='';}
+function adminLogin(){
+  if(document.getElementById('admin-pass').value===S.password){
+    document.getElementById('admin-login-screen').style.display='none';
+    document.getElementById('admin-dashboard').style.display='block';
+    renderAdminOrders();renderOrderStats();renderPaymentTxns();
+  }else showToast('Wrong password!');
+}
+function showAdminTab(tab,el){
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  if(el)el.classList.add('active');
+}
+
+// ============ SAAS OWNER PANEL ============
+let saasClickCount=0;let saasClickTimer=null;
+function saasClick(){
+  saasClickCount++;
+  if(saasClickTimer)clearTimeout(saasClickTimer);
+  saasClickTimer=setTimeout(()=>saasClickCount=0,1000);
+  if(saasClickCount>=3){saasClickCount=0;document.getElementById('saas-panel').style.display='block';document.body.style.overflow='hidden';}
+}
+function saasLogin(){
+  if(document.getElementById('saas-pass').value===S.saasOwnerPassword){
+    document.getElementById('saas-login-screen').style.display='none';
+    document.getElementById('saas-dashboard').style.display='block';
+    renderSaasShops();renderSaasStats();renderSaasExpiring();
+  }else showToast('Wrong owner password!');
+}
+function closeSaas(){document.getElementById('saas-panel').style.display='none';document.getElementById('saas-login-screen').style.display='block';document.getElementById('saas-dashboard').style.display='none';document.body.style.overflow='';}
+function addShop(){
+  const name=document.getElementById('ns-name').value.trim();
+  const owner=document.getElementById('ns-owner').value.trim();
+  const phone=document.getElementById('ns-phone').value.trim();
+  const email=document.getElementById('ns-email').value.trim();
+  const city=document.getElementById('ns-city').value.trim();
+  const plan=document.getElementById('ns-plan').value;
+  const expiry=document.getElementById('ns-expiry').value;
+  if(!name||!owner||!expiry){showToast('Name, owner & expiry required!');return;}
+  const planAmt={monthly:2500,quarterly:6500,yearly:22000}[plan]||2500;
+  S.saasShops.push({id:Date.now(),name,owner,phone,email,city,plan,expiry,status:'active',revenue:planAmt,orders:0});
+  renderSaasShops();renderSaasStats();renderSaasExpiring();
+  ['ns-name','ns-owner','ns-phone','ns-email','ns-city','ns-expiry'].forEach(id=>document.getElementById(id).value='');
+  showToast('Shop added! ✅');
+}
+function toggleShopStatus(id,action){
+  const shop=S.saasShops.find(s=>s.id===id);
+  if(!shop)return;
+  if(action==='activate')shop.status='active';
+  else if(action==='suspend')shop.status='suspended';
+  else if(action==='expire')shop.status='expired';
+  renderSaasShops();renderSaasStats();
+  if(shop.id===S.currentShopId)checkSubscription();
+  showToast(`Shop ${action}d!`);
+}
+function renewShop(id){
+  const shop=S.saasShops.find(s=>s.id===id);
+  if(!shop)return;
+  const newDate=prompt('Enter new expiry date (YYYY-MM-DD):',shop.expiry);
+  if(newDate){shop.expiry=newDate;shop.status='active';renderSaasShops();renderSaasStats();renderSaasExpiring();
+    if(shop.id===S.currentShopId)checkSubscription();showToast('Renewed! ✅');}
+}
+function deleteShop(id){
+  if(!confirm('Delete this shop? This cannot be undone.'))return;
+  S.saasShops=S.saasShops.filter(s=>s.id!==id);
+  renderSaasShops();renderSaasStats();showToast('Shop deleted.');
+}
+function renderSaasShops(){
+  const tbody=document.getElementById('saas-shops-body');
+  if(!S.saasShops.length){tbody.innerHTML='<tr><td colspan="7" style="text-align:center;color:#64748b;padding:20px;">No shops yet.</td></tr>';return;}
+  tbody.innerHTML=S.saasShops.map(shop=>{
+    const today=new Date();today.setHours(0,0,0,0);
+    const exp=new Date(shop.expiry);exp.setHours(0,0,0,0);
+    const daysLeft=Math.ceil((exp-today)/(1000*60*60*24));
+    const autoStatus=shop.status==='suspended'?'suspended':daysLeft<0?'expired':'active';
+    const statusClass=autoStatus==='active'?'shop-active':autoStatus==='expired'?'shop-expired':'shop-suspended';
+    const statusLabel=autoStatus==='active'?`✅ Active (${daysLeft}d left)`:autoStatus==='expired'?`❌ Expired (${Math.abs(daysLeft)}d ago)`:'⚠️ Suspended';
+    const planLabel={monthly:'Monthly',quarterly:'Quarterly',yearly:'Yearly'}[shop.plan]||shop.plan;
+    return `<tr>
+      <td><b style="color:#e2e8f0;">${shop.name}</b><br/><span style="color:#64748b;font-size:.75rem;">${shop.city||'—'}</span></td>
+      <td style="color:#94a3b8;font-size:.82rem;">${shop.owner}<br/>${shop.phone||''}</td>
+      <td style="color:#94a3b8;font-size:.8rem;">${planLabel}</td>
+      <td style="color:#94a3b8;font-size:.8rem;">${fmtDateShort(shop.expiry)}</td>
+      <td style="color:#f1c40f;font-weight:700;font-size:.82rem;">Rs ${(shop.revenue||0).toLocaleString()}</td>
+      <td><span class="shop-status-badge ${statusClass}">${statusLabel}</span></td>
+      <td>
+        ${autoStatus!=='active'||shop.status==='suspended'?`<button class="saas-btn green" onclick="toggleShopStatus(${shop.id},'activate')">Activate</button>`:''}
+        ${shop.status==='active'?`<button class="saas-btn yellow" onclick="toggleShopStatus(${shop.id},'suspend')">Suspend</button>`:''}
+        <button class="saas-btn blue" onclick="renewShop(${shop.id})">Renew</button>
+        <button class="saas-btn red" onclick="deleteShop(${shop.id})">Del</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+function renderSaasStats(){
+  const total=S.saasShops.length;
+  const active=S.saasShops.filter(s=>{const today=new Date();today.setHours(0,0,0,0);const exp=new Date(s.expiry);exp.setHours(0,0,0,0);return s.status==='active'&&exp>=today;}).length;
+  const expired=S.saasShops.filter(s=>{const today=new Date();today.setHours(0,0,0,0);const exp=new Date(s.expiry);exp.setHours(0,0,0,0);return exp<today||s.status==='expired';}).length;
+  const revenue=S.saasShops.reduce((s,sh)=>s+(sh.revenue||0),0);
+  document.getElementById('saas-stats-grid').innerHTML=`
+    <div class="saas-stat"><div class="n" style="color:#e2e8f0;">${total}</div><div class="l">Total Shops</div></div>
+    <div class="saas-stat active"><div class="n">${active}</div><div class="l">Active</div></div>
+    <div class="saas-stat expired"><div class="n">${expired}</div><div class="l">Expired/Suspended</div></div>
+    <div class="saas-stat revenue"><div class="n">Rs ${revenue.toLocaleString()}</div><div class="l">Total Revenue</div></div>`;
+  // Revenue per shop
+  document.getElementById('saas-revenue-grid').innerHTML=S.saasShops.map(s=>`
+    <div class="saas-stat"><div class="n" style="color:#f1c40f;font-size:1.2rem;">Rs ${(s.revenue||0).toLocaleString()}</div><div class="l">${s.name}</div><div style="color:#64748b;font-size:.72rem;margin-top:2px;">${s.orders||0} orders</div></div>`).join('');
+}
+function renderSaasExpiring(){
+  const today=new Date();today.setHours(0,0,0,0);
+  const in7=new Date(today);in7.setDate(in7.getDate()+7);
+  const expiring=S.saasShops.filter(s=>{const exp=new Date(s.expiry);exp.setHours(0,0,0,0);return exp>=today&&exp<=in7&&s.status==='active';});
+  const el=document.getElementById('saas-expiring');
+  if(!expiring.length){el.innerHTML='<p style="color:#64748b;padding:10px;">No shops expiring in the next 7 days. 🎉</p>';return;}
+  el.innerHTML=expiring.map(s=>`<div style="background:#0f172a;border-radius:10px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;"><div><b style="color:#e2e8f0;">${s.name}</b><br/><span style="color:#64748b;font-size:.8rem;">${s.owner} | Expires: ${fmtDateShort(s.expiry)}</span></div><button class="saas-btn blue" onclick="renewShop(${s.id})">Renew Now</button></div>`).join('');
+}
+
+// ============ DEMO ORDERS ============
+function seedDemoOrders(){
+  S.orders=[
+    {orderNum:'PB-0000001',date:Date.now()-86400000,type:'web',customer:{name:'Ahmed Khan',phone:'+92 311 5551234',address:'Main Bazar, Dadu'},items:[{name:'Chocolate Truffle Cake',emoji:'🍫',qty:1,price:1530},{name:'Gulab Jamun',emoji:'🟤',qty:2,price:300}],notes:'No walnuts',total:2130,status:'delivered',payment:{method:'jazzcash',txnId:'JC20241201ABC',status:'verified',amount:2130}},
+    {orderNum:'PB-0000002',date:Date.now()-3600000,type:'custom',customer:{name:'Sara Ali',phone:'+92 333 9876543',address:'N/A'},items:[{name:'Custom Cake',emoji:'🎨',qty:1,price:0}],customDetails:{theme:'Floral Birthday',flavor:'Red Velvet',size:'2 kg',message:'Happy Birthday Mama',date:'2024-12-20',notes:'Pink roses'},notes:'Custom Cake',total:0,status:'pending',payment:{method:'cod',txnId:'',status:'price_on_confirmation',amount:0}},
+    {orderNum:'PB-0000003',date:Date.now()-7200000,type:'web',customer:{name:'Bilal Shaikh',phone:'+92 321 4445678',address:'Model Colony, Dadu'},items:[{name:'Barfi Box',emoji:'🍬',qty:2,price:360},{name:'Butter Cookies',emoji:'🍪',qty:1,price:315}],notes:'',total:1035,status:'confirmed',payment:{method:'easypaisa',txnId:'EP2024XYZ999',status:'pending_verification',amount:1035}},
+  ];
+  S.orderCounter=4;
+}
+
+// Close modals on bg click
+document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
+
+init();
+</script>
+</body>
+</html>
